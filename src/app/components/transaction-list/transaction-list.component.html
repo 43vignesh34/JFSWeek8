@@ -1,0 +1,20 @@
+<h3>Add {{transactionType}}</h3>
+
+
+<form [formGroup]="transactionForm" (ngSubmit)="onSubmit()">
+    <input placeholder="Description" type="text" id="desc" formControlName="desc"/>
+    <input placeholder="Amount in Dollars" type="text" id="amt" formControlName="amt"/>
+    <button type="submit">Add</button>
+</form>
+<table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <app-transaction-item *ngFor="let transaction of transactions" [transaction]="transaction" (delete)="onDeleteTransaction($event)"></app-transaction-item>
+    </tbody>
+  </table> 
+  

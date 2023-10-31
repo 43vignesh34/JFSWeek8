@@ -1,0 +1,9 @@
+.container {
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: space-between; /* Distribute space evenly between items */
+  }
+  
+  app-transaction-list{
+    flex: 1; /* Allow the components to grow and occupy equal space */
+  }
+  
